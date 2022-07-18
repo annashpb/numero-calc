@@ -15,13 +15,14 @@
 	</head>
 	<body>
 		<div class="container">
-			<form class="form-wrapper">
+			<form id="calculation-form" class="form-wrapper">
 				<div>
 					<div class="field-row">
 						<label for="day" class="label">День</label>
 						<input
 							type="number"
 							id="day"
+							name="day"
 							required
 							min="1"
 							max="31"
@@ -34,6 +35,7 @@
 						<input
 							type="number"
 							id="month"
+							name="month"
 							required
 							min="1"
 							max="12"
@@ -46,6 +48,7 @@
 						<input
 							type="number"
 							id="year"
+							name="year"
 							required
 							min="1900"
 							step="1"
@@ -62,7 +65,8 @@
 
 			<div class="results">
 				<div class="double-cell">
-					<b>Дополнительные числа</b>
+					<b>Дополнительные числа:</b>
+					<span id="additional-numbers"></span>
 				</div>
 				<div class="cell dark no-rb">
 					<b>Число судьбы</b>
@@ -126,5 +130,6 @@
 				</div>
 			</div>
 		</div>
+		<script type="module" src="./index.js"></script>
 	</body>
 </html>
