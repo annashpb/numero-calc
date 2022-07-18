@@ -1,0 +1,145 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	background: #d9a7c7; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		45deg,
+		#fffcdc,
+		#d9a7c7
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		45deg,
+		#fffcdc,
+		#d9a7c7
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	font-family: 'Jost', sans-serif;
+}
+
+.container {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+	.container {
+		width: 750px;
+	}
+}
+@media screen and (min-width: 992px) {
+	.container {
+		width: 970px;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.container {
+		width: 1170px;
+	}
+}
+
+.form-wrapper {
+	display: flex;
+	gap: 3rem;
+	margin-bottom: 3rem;
+}
+
+.field-row {
+	margin-block: 1rem;
+	display: flex;
+}
+
+.label {
+	width: 80px;
+	padding-block: 0.5rem;
+}
+
+.input-field {
+	width: 70px;
+	padding: 0.5rem;
+	border: 1px solid #594552;
+	font-family: 'Jost', sans-serif;
+	-webkit-appearance: none;
+	-moz-appearance: textfield;
+	margin: 0;
+}
+
+.input-field::-webkit-outer-spin-button,
+.input-field::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.input-field:focus {
+	outline: none;
+}
+
+.button-container {
+	display: flex;
+	align-items: center;
+}
+
+.calculate-btn {
+	padding: 1rem;
+	border: none;
+	background-color: #bf93af;
+	font-family: 'Jost', sans-serif;
+	font-size: 1.2rem;
+	color: #fff;
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+	box-shadow: 2px 2px 5px rgba(153, 118, 140, 0.6);
+	transition: all 0.2s ease-in;
+	cursor: pointer;
+}
+
+.calculate-btn:hover,
+.calculate-btn:focus {
+	background-color: rgb(153, 118, 140);
+}
+
+.results {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (min-width: 576px) {
+	.results {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+.cell,
+.double-cell {
+	padding: 0.5rem;
+	border: 1px solid #594552;
+	margin: 0 -1px -1px 0;
+}
+
+.double-cell {
+	grid-column: 1 / span 2;
+}
+
+.cell,
+.cell-dark {
+	display: flex;
+	flex-direction: column;
+	background-color: transparent;
+	align-items: center;
+}
+
+.cell.dark {
+	background-color: #bf93af;
+}
+
+.single-result {
+	display: inline-block;
+	min-height: 1.5rem;
+}
+
+.cell.last {
+	grid-column: 2 / span 1;
+}

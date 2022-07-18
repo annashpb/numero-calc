@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./styles.css" />
+		<title>Numero Calculator</title>
+	</head>
+	<body>
+		<div class="container">
+			<form class="form-wrapper">
+				<div>
+					<div class="field-row">
+						<label for="day" class="label">День</label>
+						<input
+							type="number"
+							id="day"
+							required
+							min="1"
+							max="31"
+							step="1"
+							class="input-field"
+						/>
+					</div>
+					<div class="field-row">
+						<label for="month" class="label">Месяц</label>
+						<input
+							type="number"
+							id="month"
+							required
+							min="1"
+							max="12"
+							step="1"
+							class="input-field"
+						/>
+					</div>
+					<div class="field-row">
+						<label for="year" class="label">Год</label>
+						<input
+							type="number"
+							id="year"
+							required
+							min="1900"
+							step="1"
+							class="input-field"
+						/>
+					</div>
+				</div>
+				<div class="button-container">
+					<button type="submit" id="calculate" class="calculate-btn">
+						Рассчитать
+					</button>
+				</div>
+			</form>
+
+			<div class="results">
+				<div class="double-cell">
+					<b>Дополнительные числа</b>
+				</div>
+				<div class="cell dark no-rb">
+					<b>Число судьбы</b>
+					<span class="single-result">3</span>
+				</div>
+				<div class="cell dark">
+					<b>Темперамент</b>
+					<span class="single-result"></span>
+				</div>
+				<div class="cell">
+					<b>Характер</b>
+					<span class="single-result"></span>
+				</div>
+				<div class="cell">
+					<b>Здоровье</b>
+					<span class="single-result"></span>
+				</div>
+				<div class="cell">
+					<b>Удача</b>
+					<span class="single-result"></span>
+				</div>
+				<div class="cell dark">
+					<b>Цель</b>
+					<span class="single-result"></span>
+				</div>
+				<div class="cell">
+					<b>Энергия</b>
+					<span class="single-result"></span>
+				</div>
+				<div class="cell">
+					<b>Логика</b>
+					<span class="single-result"></span>
+				</div>
+				<div class="cell">
+					<b>Долг</b>
+					<span class="single-result"></span>
+				</div>
+				<div class="cell dark">
+					<b>Семья</b>
+					<span class="single-result"></span>
+				</div>
+				<div class="cell">
+					<b>Интерес</b>
+					<span class="single-result"></span>
+				</div>
+				<div class="cell">
+					<b>Труд</b>
+					<span class="single-result"></span>
+				</div>
+				<div class="cell">
+					<b>Память</b>
+					<span class="single-result"></span>
+				</div>
+				<div class="cell dark">
+					<b>Привычки</b>
+					<span class="single-result"></span>
+				</div>
+				<div class="cell last dark">
+					<b>Быт</b>
+					<span class="single-result"></span>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
