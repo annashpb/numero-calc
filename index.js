@@ -33,7 +33,7 @@ function calculation(e) {
 			? inputs.day[1]
 			: inputs.day[0];
 	const thirdAdditionalNum = firstAdditionalNum - dayFirstNum * 2;
-	const thirdAddArr = thirdAdditionalNum.toString().split('');
+	const thirdAddArr = thirdAdditionalNum.toString().replace('-', '').split('');
 	allNumbers.push(...thirdAddArr);
 
 	const fourthAdditionalNum = thirdAddArr.reduce(
@@ -42,6 +42,16 @@ function calculation(e) {
 	);
 	const fourthAddArr = fourthAdditionalNum.toString().split('');
 	allNumbers.push(...fourthAddArr);
+
+	const fateNum =
+		firstAdditionalNum === 11 || firstAddArr.length === 1
+			? firstAdditionalNum
+			: firstAddArr.reduce(
+					(partialSum, a) => partialSum + parseInt(a, 10),
+					0
+			  );
+
+	document.getElementById('fate-number-val').innerHTML = fateNum;
 
 	let tempVal = 0;
 	let everyDayVal = 0;
