@@ -115,12 +115,13 @@ body {
 .results {
 	display: -ms-grid;
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(4, 1fr);
+	font-size: 0.8rem;
 }
 
 @media screen and (min-width: 576px) {
 	.results {
-		grid-template-columns: repeat(4, 1fr);
+		font-size: 1rem;
 	}
 }
 
